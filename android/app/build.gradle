@@ -44,6 +44,10 @@ android {
         targetSdkVersion flutter.targetSdkVersion
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
+
+        // Needed to fix this error:
+        //    ERROR:D8: Cannot fit requested classes in a single dex file (# methods: 66787 > 65536)
+        multiDexEnabled true
     }
 
     buildTypes {
